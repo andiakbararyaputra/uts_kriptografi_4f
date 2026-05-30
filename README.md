@@ -1,7 +1,7 @@
 # 🔐 AES File Encryption — Implementasi AES-256-CBC dengan Python
 
-> Tugas 2 Mata Kuliah **Kriptografi**  
-> Program Studi Informatika — **Universitas Muhammadiyah Makassar**
+> Ujian Tengah Semester Mata Kuliah **Kriptografi**  
+> Program Studi Informatika **Universitas Muhammadiyah Makassar**
 
 ---
 
@@ -28,10 +28,10 @@ Program enkripsi dan dekripsi file teks (`.txt`) menggunakan algoritma **AES-256
 
 **AES (Advanced Encryption Standard)** adalah algoritma block cipher simetrik yang bekerja pada blok 128-bit. Setiap putaran enkripsi terdiri dari 4 operasi:
 
-1. **SubBytes** — Substitusi setiap byte menggunakan tabel S-Box
-2. **ShiftRows** — Pergeseran baris secara sirkular
-3. **MixColumns** — Pencampuran kolom menggunakan Galois Field GF(2⁸)
-4. **AddRoundKey** — XOR blok data dengan subkunci putaran
+1. **SubBytes** - Substitusi setiap byte menggunakan tabel S-Box
+2. **ShiftRows** - Pergeseran baris secara sirkular
+3. **MixColumns** - Pencampuran kolom menggunakan Galois Field GF(2⁸)
+4. **AddRoundKey** - XOR blok data dengan subkunci putaran
 
 ### Mode CBC (Cipher Block Chaining)
 
@@ -63,8 +63,8 @@ pip install pycryptodome
 ### 1. Clone repository
 
 ```bash
-git clone https://github.com/username/aes-file-encryption.git
-cd aes-file-encryption
+git clone https://github.com/andiakbararyaputra/uts_kriptografi_4f.git
+cd uts_kriptografi_4f
 ```
 
 ### 2. Jalankan program
@@ -74,9 +74,9 @@ python aes_enkripsi.py
 ```
 
 Program akan otomatis:
-- Membuat file contoh `sample.txt`
-- Mengenkripsinya menjadi `sample_encrypted.enc`
-- Mendekripsinya kembali menjadi `sample_decrypted.txt`
+- Membuat file contoh `contoh.txt`
+- Mengenkripsinya menjadi `contoh_encrypted.enc`
+- Mendekripsinya kembali menjadi `contoh_decrypted.txt`
 - Menampilkan perbandingan isi file sebelum dan sesudah enkripsi
 
 ---
@@ -86,41 +86,10 @@ Program akan otomatis:
 ```
 aes-file-encryption/
 ├── aes_enkripsi.py          # Source code utama
-├── sample.txt               # File teks asli (dibuat saat program dijalankan)
-├── sample_encrypted.enc     # File hasil enkripsi
-├── sample_decrypted.txt     # File hasil dekripsi
+├── contoh.txt               # File teks asli (dibuat saat program dijalankan)
+├── contoh_encrypted.enc     # File hasil enkripsi
+├── contoh_decrypted.txt     # File hasil dekripsi
 └── README.md
-```
-
----
-
-## 📊 Contoh Output
-
-```
-=======================================================
-  IMPLEMENTASI AES FILE ENCRYPTION  
-=======================================================
-
-[1] ENKRIPSI FILE
-  File asli       : sample.txt
-  File terenkripsi: sample_encrypted.enc
-  Ukuran plaintext : 131 byte
-  Ukuran ciphertext: 160 byte
-  IV  (hex) : 771bbe15ecc5d20bbcdaacbc872b03c5
-  Key (hex) : db9a5d5197ab18876ccc4ef4078b597d...
-
-  Isi file SEBELUM enkripsi:
-  Ini adalah file contoh untuk enkripsi AES.
-  Nama   : Andi Akbar Arya Putra
-  ...
-
-  Isi file SETELAH enkripsi (hex dump):
-  771bbe15ecc5d20bbcdaacbc872b03c5866311041ee844e2...
-
-[2] DEKRIPSI FILE
-  Hasil Dekripsi : Andiakbar121204
-  Verifikasi file: BERHASIL ✓
-=======================================================
 ```
 
 ---
